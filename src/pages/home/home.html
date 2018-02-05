@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+  <button (click)="getPokemon()" ion-button color="dark">Get Novo Pokemon</button>
+
+  <ion-list>
+    <li *ngFor="let p of pokemons"> <!-- pokemons vem do .ts -->
+      <ion-item *ngIf="p">   <!-- Só exibe quando o pokemon nao for undf ou Null-->
+        <ion-avatar item-start>
+          <img src="{{p.sprites.front_shiny}}">
+        </ion-avatar>
+        <h2>{{ p.name }}</h2>
+        <p> Oi </p>
+      </ion-item>
+    </li>
+  </ion-list>
+
+</ion-content>
